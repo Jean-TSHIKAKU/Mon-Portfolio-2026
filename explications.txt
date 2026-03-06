@@ -1,0 +1,11 @@
+Les balises HTML
+
+Exemples :
+    <p> : paragraphe
+    <a> : lien
+    <img> : image
+
+Formes :
+    Deux formes de balises :
+        * Les balises par paire : Celles qui sont constituées d'une balise ouvrante et fermante (<p></p>)
+        * Les balises uniques : Celles constituées juste d'une balise ouvrante (<img>, <input>)
