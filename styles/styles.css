@@ -101,6 +101,12 @@ a.active::after {
     object-fit: cover;
 }
 
+.hero div img:hover{
+    transition: 0.2s ease-in-out;
+    border-color: var(--violet-fonce);
+    transform: translate3d(-2px, -3px, -3px);
+}
+
 .hero h1{
     color: var(--violet-doux);
     font-size: 4rem;
@@ -139,7 +145,7 @@ a.active::after {
     text-align: center;
 }
 
-section h2{
+section h2, .titre{
     color: var(--violet-doux);
     font-size: 2.6rem;
     font-weight: 700;
@@ -147,7 +153,11 @@ section h2{
     text-align: center;
 }
 
-section h2::after{
+.titre{
+    margin-top: 2rem;
+}
+
+section h2::after, .titre::after{
     content: '';
     display: block;
     margin: 1.2rem auto;
@@ -168,7 +178,7 @@ section h2::after{
     margin: 0 auto;
     border-collapse: collapse;
     background-color: white;
-    box-shadow: 0 5px 15px rgb(64, 64, 65);
+    box-shadow: 0 5px 10px var(--gris-fonce);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -182,14 +192,16 @@ section h2::after{
     color: white;
     text-transform: uppercase;
     text-align: left;
+    font-size: 18px;
 }
 
 .competences table tbody td{
     border-bottom: 1px solid var(--gris-clair);
+    font-size: 16px;
 }
 
 .competences table tbody tr:nth-child(even){
-    background-color: whitesmoke;
+    background-color: rgb(249, 250, 229);
 }
 
 .competences table tbody tr:hover{
@@ -209,7 +221,7 @@ footer p{
     margin-bottom: 1.2rem;
 }
 
-footer a{
+footer i{
     display: inline-block;
     font-size: 1.3rem;
     color: white;
@@ -217,7 +229,111 @@ footer a{
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
-footer a:hover{
+footer i:hover{
     color: var(--orange-vif);
     transform: translateY(-3px);
+}
+
+/*Style spéciale pour la page projets.html*/
+
+.realisations{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px 30px;
+    padding: 1rem 8rem;
+}
+
+.realisations .carte{
+    background-color: white;
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1px 1px var(--gris-clair);
+}
+
+.realisations .carte:hover{
+    transition: 0.2s ease-in-out;
+    transform: translateY(-5px);
+}
+
+.realisations .carte .font{
+    height: 350px;
+    border-bottom: 5px solid var(--violet-fonce);
+    overflow: hidden;
+}
+
+.realisations .carte img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.realisations .carte img:hover{
+    transition: 0.3s ease-in-out;
+    scale: 1.1;
+    opacity: 1;
+}
+
+.realisations .carte .detail{
+    padding: 1rem;
+}
+
+.realisations .carte .detail h3{
+    color: var(--violet-fonce);
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.realisations .carte .detail p{
+    color: var(--gris-fonce);
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.realisations .carte .detail .tech{
+    display: flex;
+    gap: 20px;
+}
+
+.realisations .carte .detail .tech a{
+    background-color: var(--gris-clair);
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--violet-fonce);
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-bottom: 1rem;
+    align-self: center;
+}
+
+.realisations .carte .detail .tech a:hover{
+    transition: 0.2s ease-in-out;
+    background-color: var(--violet-fonce);
+    color: white;
+    font-size: 14px;
+}
+
+.realisations .carte .ref{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var(--gris-clair);
+    padding: 1rem;
+}
+
+.realisations .carte .ref .partage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.realisations .carte .ref .partage p{
+    font-weight: bold;
+}
+
+.realisations .carte .ref .partage p:hover, .realisations .carte .ref .partage i:hover{
+    transition: 0.2s ease-in-out;
+    color: var(--violet-fonce);
+    transform: translate3d(-1px, -2px, -3px);
 }
