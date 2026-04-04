@@ -201,7 +201,7 @@ section h2::after, .titre::after{
 }
 
 .competences table tbody tr:nth-child(even){
-    background-color: rgb(249, 250, 229);
+    background-color: rgb(239, 247, 236);
 }
 
 .competences table tbody tr:hover{
@@ -258,7 +258,7 @@ footer i:hover{
 
 .realisations .carte .font{
     height: 350px;
-    border-bottom: 5px solid var(--violet-fonce);
+    border-bottom: 5px solid var(--violet-doux);
     overflow: hidden;
 }
 
@@ -288,7 +288,7 @@ footer i:hover{
 .realisations .carte .detail p{
     color: var(--gris-fonce);
     font-size: 16px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 .realisations .carte .detail .tech{
