@@ -236,14 +236,14 @@ footer i:hover{
 
 /*Style spéciale pour la page projets.html*/
 
-.realisations{
+.realisations, .passions, .divertissements, .contact{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 50px 30px;
     padding: 1rem 8rem;
 }
 
-.realisations .carte{
+.carte{
     background-color: white;
     display: block;
     border-radius: 20px;
@@ -251,52 +251,73 @@ footer i:hover{
     box-shadow: 1px 1px var(--gris-clair);
 }
 
-.realisations .carte:hover{
+.carte:hover{
     transition: 0.2s ease-in-out;
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
-.realisations .carte .font{
+.carte .font{
     height: 350px;
     border-bottom: 5px solid var(--violet-doux);
     overflow: hidden;
 }
 
-.realisations .carte img{
+.carte .font img{
     width: 100%;
     height: 350px;
     object-fit: cover;
-    opacity: 0.6;
 }
 
-.realisations .carte img:hover{
+.carte .img:hover{
     transition: 0.3s ease-in-out;
     scale: 1.1;
-    opacity: 1;
 }
 
-.realisations .carte .detail{
+.carte .detail{
     padding: 1rem;
 }
 
-.realisations .carte .detail h3{
+.carte .detail h3{
     color: var(--violet-fonce);
     font-size: 20px;
     margin-bottom: 1rem;
 }
 
-.realisations .carte .detail p{
+.carte .detail p{
     color: var(--gris-fonce);
     font-size: 16px;
     margin-bottom: 1.2rem;
 }
 
-.realisations .carte .detail .tech{
+.carte .detail p abbr{
+    text-decoration: none;
+}
+
+.carte .detail .tech{
     display: flex;
     gap: 20px;
 }
 
-.realisations .carte .detail .tech a{
+.carte .detail .mc{
+    display: block;
+    gap: 5px;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+
+.carte .detail .mc li{
+    color: var(--gris-fonce);
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+}
+
+.carte .detail .mc li:hover{
+    transition: 0.2s ease-in-out;
+    color: var(--violet-fonce);
+    font-weight: bold;
+}
+
+.carte .detail .tech a, .carte .detail p a{
     background-color: var(--gris-clair);
     text-decoration: none;
     font-weight: 700;
@@ -307,32 +328,32 @@ footer i:hover{
     align-self: center;
 }
 
-.realisations .carte .detail .tech a:hover{
+.carte .detail .tech a:hover, .carte .detail p a:hover{
     transition: 0.2s ease-in-out;
     background-color: var(--violet-fonce);
     color: white;
     font-size: 14px;
 }
 
-.realisations .carte .ref{
+.carte .ref{
     display: flex;
     justify-content: space-between;
     border-top: 2px solid var(--gris-clair);
     padding: 1rem;
 }
 
-.realisations .carte .ref .partage{
+.carte .ref .partage{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
 
-.realisations .carte .ref .partage p{
+.carte .ref .partage p{
     font-weight: bold;
 }
 
-.realisations .carte .ref .partage p:hover, .realisations .carte .ref .partage i:hover{
+.carte .ref .partage p:hover, .carte .ref .partage i:hover{
     transition: 0.2s ease-in-out;
     color: var(--violet-fonce);
     transform: translate3d(-1px, -2px, -3px);
